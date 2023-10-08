@@ -1,12 +1,12 @@
 "use client";
 import { uploadToS3 } from "@/lib/s3";
 import { useMutation } from "@tanstack/react-query";
+import axios from "axios";
 import { Inbox, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { useDropzone } from "react-dropzone";
-import axios from "axios";
-import { toast } from "react-hot-toast";
-import { useRouter } from "next/navigation";
+import { Toaster, toast } from "react-hot-toast";
 
 // https://github.com/aws/aws-sdk-js-v3/issues/4126
 
@@ -67,6 +67,7 @@ const FileUpload = () => {
   });
   return (
     <div className="p-2 bg-white rounded-xl">
+      <Toaster />
       <div
         {...getRootProps({
           className:
