@@ -7,7 +7,6 @@ import { checkSubscription } from "@/lib/subscription";
 import { auth } from "@clerk/nextjs";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
-import React from "react";
 
 type Props = {
   params: {
@@ -32,7 +31,7 @@ const ChatPage = async ({ params: { chatId } }: Props) => {
   const isPro = await checkSubscription();
 
   return (
-    <div className="flex max-h-screen overflow-scroll">
+    <div className="flex min-h-screen overflow-scroll">
       <div className="flex w-full max-h-screen overflow-scroll">
         {/* chat sidebar */}
         <div className="flex-[1] max-w-xs">

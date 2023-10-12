@@ -7,7 +7,7 @@ import Providers from "@/components/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ChatPDF YT",
+  title: "ChatPDF",
 };
 
 export default function RootLayout({
